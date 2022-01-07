@@ -1,1 +1,3 @@
-# Desenvolvimento com o livro "Introdução a Programação com C"
+#Introdução a Programação com C
+
+Desenvolvimento do jogo proposto no livro.
