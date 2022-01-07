@@ -1,0 +1,129 @@
+/*
+// Cabeçario 
+#include <stdio.h>
+# define numero_de_tentativas 3
+int main(void) {
+
+  // Declaração de variáveis 
+  int numeroSecreto;
+  int chute;
+  int ganhou = 0;
+  int tentativas = 1;
+
+  // Entrada de dados
+  numeroSecreto = 42;
+
+  // Saída
+  printf("****************************************\n");
+  printf("* Bem-vindo(a) ao jogo de adivinhação! *\n");
+  printf("****************************************\n");
+
+  // Processamento - loop while
+  while(1) {
+    printf("Qual é o seu chute? ");
+    scanf("%d", &chute);
+
+    if (chute < 0) {
+        printf("Não é permitida a utilização de números negativos\n");
+        continue;
+    }
+
+    printf("Seu %do. chute foi %d\n", tentativas, chute);
+
+    // Processamento - condicionais
+    int acertou = chute == numeroSecreto;
+    int maior = chute > numeroSecreto;
+
+    if (acertou) {
+      printf("Você acertou! \n");
+      ganhou = 1;
+    }
+    
+      else if (maior) {
+        //int maior = chute > numeroSecreto;
+          printf("Seu chute foi maior do que o número secreto! \n");
+        }
+
+      else {
+        printf("Seu chute foi menor do que o número secreto! \n"); 
+        }
+        tentativas++;
+      }
+}
+//printf("O número %d é inteiro"); --> Aprender isso
+//int acertou = chute == numeroSecreto; entender isso -- PÁGINA 24
+// Página 41
+*/
+
+#include <stdio.h>
+
+int main() {
+
+	// imprime cabecalho do nosso jogo
+	printf("******************************************\n");
+	printf("* Bem vindo ao nosso jogo de adivinhação *\n");
+	printf("******************************************\n");
+
+	int numerosecreto = 42;
+
+	int chute;
+	int tentativas = 1;
+
+	while(1) {
+
+		printf("Tentativa %d\n", tentativas);
+		printf("Qual é o seu chute? ");
+
+		scanf("%d", &chute);
+		printf("Seu chute foi %d\n", chute);
+
+		if(chute < 0) {
+			printf("Você não pode chutar números negativos!\n");
+			continue;
+		}
+
+		int acertou = (chute == numerosecreto);
+		int maior = chute > numerosecreto;
+
+		if(acertou) {
+			printf("Parabéns! Você acertou!\n");
+			printf("Jogue de novo, você é um bom jogador!\n");
+
+			break;
+		}
+
+		else if(maior) {
+			printf("Seu chute foi maior que o número secreto\n");
+		} 
+
+		else {
+			printf("Seu chute foi menor que o número secreto\n");
+		}
+
+		tentativas++;
+	}
+
+	printf("Fim de jogo!\n");
+	printf("Você acertou em %d tentativas!", tentativas);
+  
+  int pontos = 1000;
+
+  pontos = pontos + 2;
+  pontos = pontos * 4/3;
+  pontos = pontos -1;
+
+  int outravariavel = pontos * 7;
+  printf("Você fez %d pontos", pontos);
+
+  int pontos = ((4 * 2) + (1/2)) * 3 - 1;
+
+  for {
+    int pontosperdidos = (chute - numerosecreto) / 2;
+    pontos = pontos - pontosperdidos;
+  }
+  
+  for {
+  }
+  printf("Você fez %d pontos\n", pontos);
+  printf("Obrigado por jogar!\n");
+}
